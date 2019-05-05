@@ -1,0 +1,21 @@
+version: '3'
+services:
+  phpfpm:
+    build: ./phpfpm
+    tty: true
+    volumes:
+      - ./volume/var/log:/var/log
+      - ./volume/var/www:/var/www
+
+  nginx:
+    build: ./nginx
+    tty: true
+    ports:
+      - "80:80"
+    volumes:
+      - ./volume/var/www:/var/www
+    depends_on:
+      - phpfpm
+    links:
+      - phpfpm
+

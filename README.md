@@ -1,0 +1,3 @@
+dockerコンテナとしてnginxとphp-fpm動作させて、PhpStormを使ったxdebugによるリモートデバッグできるまでをやる
+
+https://qiita.com/tttreal/items/59cd31c59b29e902e39f
